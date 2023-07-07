@@ -17,8 +17,13 @@ export default function Siderbar() {
 
     return (
         <div className={`SideBarContainer ${isOpen ? 'open' : ''}`} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-            <SidebarIcon icon={PlusIcon} isOpen={isOpen} text={isOpen ? 'Add FrameData' : ''}/>
-            <SidebarIcon icon={ViewIcon} isOpen={isOpen} text={isOpen ? 'View FrameData' : ''}/>
+            <div className="Logo">
+                <p>{isOpen ? 'FrameBot' : 'FB'}</p>
+            </div>
+            <div className="Icons">
+                <SidebarIcon icon={PlusIcon} isOpen={isOpen} text={isOpen ? 'Add FrameData' : ''}/>
+                <SidebarIcon icon={ViewIcon} isOpen={isOpen} text={isOpen ? 'View FrameData' : ''}/>
+            </div>
         </div>
 
     )
