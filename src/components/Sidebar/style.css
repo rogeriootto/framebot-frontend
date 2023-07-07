@@ -1,0 +1,16 @@
+.SideBarContainer {
+    display: flex;
+    flex-direction: column;
+
+    width: 87px;
+    height: 100vh;
+    
+    justify-content: center;
+
+    background-color: #D9D9D9;
+    transition: width 0.15s ease;
+}
+
+.SideBarContainer.open{
+    width: 300px;
+}

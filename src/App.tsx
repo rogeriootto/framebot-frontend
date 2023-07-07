@@ -1,9 +1,9 @@
 import './App.css';
+import Siderbar from './components/Sidebar';
 
 function App() {
   return (
-    <div className="App">
-    </div>
+    <Siderbar />
   );
 }
 
