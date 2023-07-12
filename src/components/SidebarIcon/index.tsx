@@ -1,5 +1,6 @@
 import React from "react";
 import './style.css';
+import { Link } from "react-router-dom";
 
 type sidebarIconProps = {
     icon: any;
@@ -11,11 +12,11 @@ type sidebarIconProps = {
 export default function SidebarIcon(props: sidebarIconProps) {
 
     return (
-        <a href={props.href}>
+        <Link to={`/${props.href}`}>
             <div className="SidebarIconContainer">
                 <img src={props.icon} alt='sidebar icon' />
                 {props.isOpen && (<p className="SidebarText">{props.text}</p>)}
             </div>
-        </a>
+        </Link>
     )
 }

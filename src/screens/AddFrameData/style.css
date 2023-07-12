@@ -1,0 +1,51 @@
+.ContainerChooseGame{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+
+    animation-name: ChooseGame;
+    animation-duration: 1.5s;
+
+    .Title{
+        font-size: 60px;
+        font-weight: bold;
+        margin-bottom: 50px;
+    }
+
+    .Games{
+        display: flex;
+        flex-direction: row;
+
+        .Game{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+
+            width: 300px;
+            height: 300px;
+
+            font-weight: bold;
+
+            border-radius: 5%;
+            box-shadow: 0px 0px 15px rgb(206, 206, 206);
+
+            .GameImg{
+                height: 200px;
+                margin: 10px;
+                border-radius: 5%;
+                box-shadow: 0px 0px 10px black;
+            }
+
+        }
+    }
+}
+
+@keyframes ChooseGame{
+    0% {opacity: 0;}
+    100% {opacity: 1;};
+}

@@ -3,6 +3,7 @@ import './style.css';
 import SidebarIcon from "../SidebarIcon";
 import PlusIcon from '../../assets/svg/plus.svg';
 import ViewIcon from '../../assets/svg/view.svg'
+import { Link } from "react-router-dom";
 
 export default function Siderbar() {
 
@@ -18,10 +19,12 @@ export default function Siderbar() {
     return (
         <div className={`SideBarContainer ${isOpen ? 'open' : ''}`} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
             <div className="Logo">
-                <p>{isOpen ? 'FrameBot' : 'FB'}</p>
+                <Link to="/">
+                    <p>{isOpen ? 'FrameBot' : 'FB'}</p>
+                </Link>
             </div>
             <div className="Icons">
-                <SidebarIcon icon={PlusIcon} isOpen={isOpen} text={isOpen ? 'Add FrameData' : ''}/>
+                <SidebarIcon icon={PlusIcon} isOpen={isOpen} text={isOpen ? 'Add FrameData' : ''} href="AddFrameData"/>
                 <SidebarIcon icon={ViewIcon} isOpen={isOpen} text={isOpen ? 'View FrameData' : ''}/>
             </div>
         </div>
