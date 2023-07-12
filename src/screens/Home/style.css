@@ -1,0 +1,22 @@
+.ContainerHome{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    .MainText{
+        font-size: 80px;
+        font-weight: bold;
+        text-align: center;
+        user-select: none;
+        animation-name: MainTextAnimation;
+        animation-duration: 1.5s;
+    }
+}
+
+@keyframes MainTextAnimation{
+    0% {font-size: 20px; opacity: 0;}
+    60% {font-size: 90px; transform: rotateX(0deg); opacity: 1;}
+    100% {font-size: 80px; transform: rotateX(360deg);};
+}
